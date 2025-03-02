@@ -11,8 +11,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #F4C2C2;
+    color: black;
     text-align: center;
     padding: 2rem;
 }
@@ -25,12 +25,20 @@ header h1 {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.car-group {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
 }
 
 .car-card {
+    min-width: 300px;
+    max-width: 350px;
+    flex: 0 0 auto;
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -62,7 +70,7 @@ header h1 {
 }
 
 footer {
-    background-color: #333;
+    background-color: #F4C2C2;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -72,8 +80,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .car-gallery {
-        grid-template-columns: 1fr;
+    .car-group {
+        padding: 1rem;
+        justify-content: flex-start;
     }
     
     header {
@@ -83,4 +92,20 @@ footer {
     .car-card {
         margin-bottom: 1rem;
     }
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
 } 
